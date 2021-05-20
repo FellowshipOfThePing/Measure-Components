@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "NODE_ENV=production tsdx build",
+    "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -20,7 +20,9 @@
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=47be2a4eaea0"
+    "chromatic": "npx chromatic --project-token=47be2a4eaea0",
+    "tailwind": "npx tailwind-config-viewer",
+    "example": "yarn build && cd example && yarn install && yarn build && yarn start"
   },
   "peerDependencies": {
     "react": ">=16"

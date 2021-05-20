@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Button, ButtonProps } from '../src';
+import { TutorialButton, TutorialButtonProps } from '../src';
 
 const meta: Meta = {
-  title: 'Button',
-  component: Button,
+  title: 'TutorialButton',
+  component: TutorialButton,
   argTypes: {
     text: {
       control: {
@@ -19,8 +19,8 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<TutorialButtonProps> = (args) => <TutorialButton {...args} />;
 
 export const SCButton = Template.bind({});
 
-SCButton.args = { text: 'Save' };
+SCButton.args = { text: 'Button' };

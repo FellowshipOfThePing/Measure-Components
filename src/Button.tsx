@@ -1,11 +1,14 @@
-import React, { FC, ButtonHTMLAttributes } from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
+
+const variantColors = {
+  default: 'bg-measure-dark-blue',
+  warning: 'bg-measure-dark-red',
+};
 
 const StyledButton = styled.button.attrs(
   ({ variant }: { variant: ButtonVariants }) => ({
-    className: `px-8 py-2 font-semibold ${
-      variant === 'default' ? 'text-white' : 'text-red-700'
-    } transition duration-500 ease-in-out transform rounded-lg shadow-xl bg-gradient-to-r from-red-300 to-blue-300 hover:from-pink-400 hover:to-indigo-400`,
+    className: `px-6 h-9 font-measure font-normal text-xs text-white ${variantColors[variant]} rounded`,
   })
 )<{ variant: ButtonVariants }>``;
 
@@ -15,11 +18,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariants;
 }
 
-export const Button: FC<ButtonProps> = ({
-  text,
-  variant = 'default',
-  ...rest
-}) => {
+export const Button = ({ text, variant = 'default', ...rest }: ButtonProps) => {
   return (
     <StyledButton variant={variant} {...rest}>
       {text}
