@@ -21,6 +21,6 @@ export default meta;
 
 const Template: Story<TutorialButtonProps> = (args) => <TutorialButton {...args} />;
 
-export const SCButton = Template.bind({});
+export const SCTutorialButton = Template.bind({});
 
-SCButton.args = { text: 'Button' };
+SCTutorialButton.args = { text: 'Button' };

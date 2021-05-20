@@ -1,4 +1,6 @@
 {
+  "name": "measure-components",
+  "author": "Jeremy",
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -7,9 +9,6 @@
     "dist",
     "src"
   ],
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -20,12 +19,12 @@
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=47be2a4eaea0",
+    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes",
     "tailwind": "npx tailwind-config-viewer",
     "example": "yarn build && cd example && yarn install && yarn build && yarn start"
   },
-  "peerDependencies": {
-    "react": ">=16"
+  "engines": {
+    "node": ">=10"
   },
   "husky": {
     "hooks": {
@@ -38,8 +37,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "measure-components",
-  "author": "Jeremy",
   "module": "dist/measure-components.esm.js",
   "size-limit": [
     {
@@ -56,6 +53,9 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss|sass)$": "identity-obj-proxy"
     }
+  },
+  "peerDependencies": {
+    "react": ">=16"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",

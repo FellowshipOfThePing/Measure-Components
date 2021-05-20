@@ -6,7 +6,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 // As we are using the Component Story Format we can import it from our
 // previously written story.
-import { SCButton as TutorialButton } from '../stories/TutorialButton.stories';
+import { SCTutorialButton as TutorialButton } from '../stories/TutorialButton.stories';
 
 describe('TutorialButton', () => {
   it('should render the button without crashing', () => {

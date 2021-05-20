@@ -1,6 +1,8 @@
 import React, { FC, ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
+import './tailwind.css';
+
 const StyledButton = styled.button.attrs(
   ({ variant }: { variant: TutorialButtonVariants }) => ({
     className: `px-8 py-2 font-semibold ${

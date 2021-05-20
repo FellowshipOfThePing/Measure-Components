@@ -1,6 +1,8 @@
 import React, { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
+import './tailwind.css';
+
 const variantColors = {
   default: 'bg-measure-dark-blue',
   warning: 'bg-measure-dark-red',

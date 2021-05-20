@@ -1,12 +1,9 @@
 module.exports = {
   purge: [
-    './src/components/**/*.tsx',
-
-    // This is a convention for files that only include Styled Components.
-    // If you don't use this convention feel free to skip it.
-    './src/components/**/*.styled.tsx',
+    // './src/components/**/*.tsx', // Was causing build issues in Chromatic
+    // './src/components/**/*.styled.tsx', // Was causing build issues in Chromatic
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {
       colors: {
